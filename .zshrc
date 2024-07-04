@@ -1,13 +1,30 @@
+# ～☆～
+
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# ～☆～
+# Vim
+alias v="/opt/homebrew/bin/nvim"
+
+# Dirs
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
 alias zz="ls -A"
-alias f="fzf"
-alias v="nvim"
+alias zl="ls"
+
+# Git
 alias g="git"
+alias ga="git add"
+alias gc="git commit -m"
+alias gca="git commit -a -m"
+
+# FZF
+alias f="fzf"
 
 # Go lang monkey patching
 export GOPATH=$HOME/go
