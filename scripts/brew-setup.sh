@@ -8,7 +8,7 @@ if test ! $(which brew); then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
-PACKAGES=(
+FORMULAE_LEAVES=(
     # https://formulae.brew.sh/formula/zsh
     # UNIX shell (command interpreter)
     zsh
@@ -72,20 +72,20 @@ PACKAGES=(
 
 echo "$TAG Verifying Homebrew packages"
 
-PACKAGES_TO_INSTALL=()
-LIST=$(brew list)
+FORMULAE_TO_INSTALL=()
+INSTALLED_LEAVES=$(brew list)
 
-for value in "${PACKAGES[@]}"
+for l in "${FORMULAE_LEAVES[@]}"
 do
-    if ! echo $LIST | grep -q $value; then
-        PACKAGES_TO_INSTALL+=($value)
+    if ! echo $INSTALLED_LEAVES | grep -q $l; then
+        FORMULAE_TO_INSTALL+=($l)
     fi
 done
 
-if [ ${#PACKAGES_TO_INSTALL[@]} -eq 0 ]; then
+if [ ${#FORMULAE_TO_INSTALL[@]} -eq 0 ]; then
     echo "$TAG Everything seems to be in order"
     exit 0
 fi
 
 echo "$TAG Installing missing packages..."
-brew install ${PACKAGES_TO_INSTALL[@]}
+brew install ${FORMULAE_TO_INSTALL[@]}
