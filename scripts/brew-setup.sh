@@ -66,6 +66,8 @@ PACKAGES=(
     tpm
 )
 
+echo "$TAG Verifying Homebrew packages"
+
 PACKAGES_TO_INSTALL=()
 LIST=$(brew list)
 
