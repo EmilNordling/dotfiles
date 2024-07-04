@@ -9,6 +9,6 @@ TAG="[MacOS Setup]"
 
 echo "$TAG Starting new MacOS setup"
 
-/bin/bash ./sh-brew-setup.sh
+/bin/bash ./scripts/brew-setup.sh
 
 echo "$TAG MacOS setup complete!"
