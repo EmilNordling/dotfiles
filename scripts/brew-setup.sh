@@ -13,6 +13,10 @@ PACKAGES=(
     # UNIX shell (command interpreter)
     zsh
 
+    # https://formulae.brew.sh/cask/wezterm
+    # GPU-accelerated cross-platform terminal emulator and multiplexer
+    wezterm
+
     # https://formulae.brew.sh/formula/act#default
     # Run your GitHub Actions locally
     act
