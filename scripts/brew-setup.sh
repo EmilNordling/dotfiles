@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-TAG="[Homebrew]"
+readonly TAG="[Homebrew]"
 
 # Check for Homebrew to be present, install if it's missing
 if test ! $(which brew); then
