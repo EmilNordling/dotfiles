@@ -7,6 +7,7 @@ eval "$(starship init zsh)"
 
 # Vim
 alias v="/opt/homebrew/bin/nvim"
+alias vim=nvim
 
 # Dirs
 alias ..="cd .."
