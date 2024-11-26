@@ -68,6 +68,10 @@ FORMULAE_LEAVES=(
     # https://github.com/tmux-plugins/tpm
     # Tmux Plugin Manager
     tpm
+
+    # https://formulae.brew.sh/formula/stripe-cli#default
+    # Command-line tool for Stripe
+    stripe/stripe-cli/stripe
 )
 
 echo "$TAG Verifying Homebrew packages"
