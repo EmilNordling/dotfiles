@@ -35,3 +35,4 @@ export GOROOT="$(brew --prefix golang)/libexec"
 # export GOROOT=/usr/local/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+. "/Users/emilnordling/.deno/env"
