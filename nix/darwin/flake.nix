@@ -1,3 +1,6 @@
+# To update the configuration, run:
+# darwin-rebuild switch --flake ~/nix#nord
+
 {
   description = "General Purpose Configuration for macOS and NixOS";
 
@@ -25,54 +28,34 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
-            pkgs.mkalias
-            pkgs.neovim
-            pkgs.tmux
-            pkgs.nixfmt-rfc-style
+            pkgs.mkalias # Create aliases for executables
+            pkgs.neovim # Ambitious Vim-fork focused on extensibility and agility
+            pkgs.tmux # Terminal multiplexer
+            pkgs.nixfmt-rfc-style # The official formatter for Nix code
+            pkgs.zsh # UNIX shell (command interpreter)
+            pkgs.act # Run your GitHub Actions locally
+            pkgs.fzf # Command-line fuzzy finder written in Go
+            pkgs.git # Distributed revision control system, git lol
+            pkgs.starship # The cross-shell prompt for astronauts
+            pkgs.mkcert # Simple tool to make locally trusted development certificates
+            pkgs.zoxide # Shell extension to navigate your filesystem faster
           ];
 
           homebrew = {
             enable = true;
+            casks = []
             brews = [
-              # https://formulae.brew.sh/formula/zsh
-              # UNIX shell (command interpreter)
-              "zsh"
-
-              # https://formulae.brew.sh/formula/act#default
-              # Run your GitHub Actions locally
-              "act"
-
-              # https://formulae.brew.sh/formula/fzf#default
-              # Command-line fuzzy finder written in Go
-              "fzf"
-
-              # https://formulae.brew.sh/formula/git#default
-              # Distributed revision control system, git lol
-              "git"
-
               # https://formulae.brew.sh/formula/go#default
-              # Open source programming language to build simple/reliable/efficient software
+              # Go lang
               "go"
 
               # https://formulae.brew.sh/formula/rust#default
-              # Safe, concurrent, practical language
+              # Rust lang
               "rust"
-
-              # https://formulae.brew.sh/formula/starship#default
-              # The cross-shell prompt for astronauts
-              "starship"
-
-              # https://formulae.brew.sh/formula/mkcert#default
-              # Simple tool to make locally trusted development certificates
-              "mkcert"
 
               # https://formulae.brew.sh/formula/n#default
               # Node version management
               "n"
-
-              # https://formulae.brew.sh/formula/neovim#default
-              # Ambitious Vim-fork focused on extensibility and agility
-              "neovim"
 
               # https://formulae.brew.sh/formula/pnpm#default
               # Fast, disk space efficient package manager
