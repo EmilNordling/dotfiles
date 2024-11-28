@@ -39,7 +39,7 @@ FORMULAE_LEAVES=(
 
     # https://formulae.brew.sh/formula/starship#default
     # The cross-shell prompt for astronauts
-    starship
+    # starship
 
     # https://formulae.brew.sh/formula/mkcert#default
     # Simple tool to make locally trusted development certificates
