@@ -1,5 +1,8 @@
+# First time, run:
+# nix run nix-darwin --extra-experimental-features "nix-command flakes" -- switch --flake ~/source/dotfiles/nix/darwin#nord
+
 # To update the configuration, run:
-# darwin-rebuild switch --flake ~/nix#nord
+# darwin-rebuild switch --flake ~/source/dotfiles/nix/darwin#nord
 
 {
   description = "General Purpose Configuration for macOS and NixOS";
@@ -15,8 +18,8 @@
     inputs@{
       self,
       nix-darwin,
-      nixpkgs,
       nix-homebrew,
+      nixpkgs,
     }:
     let
       configuration =
@@ -36,14 +39,14 @@
             pkgs.act # Run your GitHub Actions locally
             pkgs.fzf # Command-line fuzzy finder written in Go
             pkgs.git # Distributed revision control system, git lol
-            pkgs.starship # The cross-shell prompt for astronauts
+            # pkgs.starship # The cross-shell prompt for astronauts
             pkgs.mkcert # Simple tool to make locally trusted development certificates
             pkgs.zoxide # Shell extension to navigate your filesystem faster
           ];
 
           homebrew = {
             enable = true;
-            casks = []
+            casks = [];
             brews = [
               # https://formulae.brew.sh/formula/go#default
               # Go lang
@@ -69,11 +72,17 @@
               # Tmux Plugin Manager
               "tpm"
 
+              # https://formulae.brew.sh/formula/starship#default
+              # The cross-shell prompt for astronauts
+              "starship"
+
               # https://formulae.brew.sh/formula/stripe-cli#default
               # Command-line tool for Stripe
-              "stripe/stripe-cli/stripe"
+              # "stripe/stripe-cli/stripe"
             ];
-            # onActivation.cleanup = "zap";
+            onActivation.cleanup = "zap";
+            onActivation.autoUpdate = true;
+            onActivation.upgrade = true;
           };
 
           system.activationScripts.applications.text =
@@ -131,9 +140,6 @@
 
               # User owning the Homebrew prefix
               user = "emilnordling";
-
-              # Automatically migrate existing Homebrew installations
-              autoMigrate = true;
             };
           }
         ];
