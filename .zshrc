@@ -27,6 +27,8 @@ alias gca="git commit -a -m"
 # FZF
 alias f="fzf"
 
+export PATH="/opt/homebrew:$PATH"
+
 # Go lang monkey patching
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
