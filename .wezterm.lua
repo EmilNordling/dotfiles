@@ -21,5 +21,8 @@ config.keys = {
 }
 config.color_scheme = 'Vacuous 2 (terminal.sexy)'
 
+config.hide_tab_bar_if_only_one_tab = true
+config.window_decorations = "RESIZE"
+
 -- and finally, return the configuration to wezterm
 return config
