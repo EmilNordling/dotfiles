@@ -42,6 +42,13 @@
             # pkgs.starship # The cross-shell prompt for astronauts
             pkgs.mkcert # Simple tool to make locally trusted development certificates
             pkgs.zoxide # Shell extension to navigate your filesystem faster
+
+            ##########################
+            # Dotnet Stuff, for work
+            ##########################
+            # pkgs.dotnetCorePackages.sdk_9_0
+            pkgs.dotnetCorePackages.sdk_8_0_3xx
+            pkgs.azure-cli
           ];
 
           homebrew = {
