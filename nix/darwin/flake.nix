@@ -64,10 +64,6 @@
               # Fast, disk space efficient package manager
               "pnpm"
 
-              # https://formulae.brew.sh/formula/zoxide#default
-              # Shell extension to navigate your filesystem faster
-              "zoxide"
-
               # https://github.com/tmux-plugins/tpm
               # Tmux Plugin Manager
               "tpm"
