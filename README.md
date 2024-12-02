@@ -1,3 +1,6 @@
+>[!NOTE]
+>I'm migrating to Nix. So the setup is a bit broken.
+
 # Dotfiles
 
 Hello and welcome to Jurassic Park
