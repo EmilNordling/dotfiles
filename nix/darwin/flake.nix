@@ -46,8 +46,7 @@
             ##########################
             # Dotnet Stuff, for work
             ##########################
-            # pkgs.dotnetCorePackages.sdk_9_0
-            pkgs.dotnetCorePackages.sdk_8_0_3xx
+            pkgs.dotnetCorePackages.sdk_9_0
             pkgs.azure-cli
           ];
 
