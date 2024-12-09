@@ -31,6 +31,7 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
+            pkgs.gh # Github cli
             pkgs.mkalias # Create aliases for executables
             pkgs.neovim # Ambitious Vim-fork focused on extensibility and agility
             pkgs.tmux # Terminal multiplexer
@@ -52,7 +53,14 @@
 
           homebrew = {
             enable = true;
-            casks = [];
+            casks = [
+              "zed"
+              "wezterm"
+              "fork"
+              "slack"
+              "linear-linear"
+              "figma"
+            ];
             brews = [
               # https://formulae.brew.sh/formula/go#default
               # Go lang
@@ -81,6 +89,10 @@
               # https://formulae.brew.sh/formula/stripe-cli#default
               # Command-line tool for Stripe
               # "stripe/stripe-cli/stripe"
+
+              # https://formulae.brew.sh/formula/vercel-cli#default
+              # Command-line interface for Vercel
+              "vercel-cli"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
