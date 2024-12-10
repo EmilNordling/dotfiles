@@ -144,6 +144,36 @@
               done
             '';
 
+          system.defaults = {
+            dock.autohide = true;
+            dock.largesize = 58;
+            dock.tilesize = 48;
+            dock.magnification = true;
+            dock.autohide-delay = null;
+            dock.minimize-to-application = false;
+            dock.show-recents = false;
+            dock.mineffect = "scale";
+            dock.persistent-apps = [
+              "/Applications/Safari.app"
+              "/Applications/Zed.app"
+              "/Applications/WezTerm.app"
+              "/Applications/Fork.app"
+              "/Applications/Figma.app"
+              "/Applications/Linear.app"
+              "/Applications/Slack.app"
+              "/System/Applications/Mail.app"
+              "/System/Applications/Calendar.app"
+              "/Applications/Firefox.app"
+              "/Applications/Microsoft Edge.app"
+              "/Applications/Google Chrome.app"
+            ];
+            finder.FXPreferredViewStyle = "clmv";
+            loginwindow.GuestEnabled = false;
+            NSGlobalDomain.AppleICUForce24HourTime = true;
+            NSGlobalDomain.AppleInterfaceStyle = "Dark";
+            NSGlobalDomain.KeyRepeat = 2;
+          };
+
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
 
