@@ -60,6 +60,22 @@
               "slack"
               "linear-linear"
               "figma"
+
+              # https://formulae.brew.sh/cask/google-chrome#default
+              # Web browser
+              "google-chrome"
+
+              # https://formulae.brew.sh/cask/microsoft-edge#default
+              # Web browser
+              "microsoft-edge"
+
+              # https://formulae.brew.sh/cask/firefox#default
+              # Web browser
+              "firefox"
+
+              # https://formulae.brew.sh/cask/zen-browser#default
+              # Web browser
+              "zen-browser"
             ];
             brews = [
               # https://formulae.brew.sh/formula/go#default
