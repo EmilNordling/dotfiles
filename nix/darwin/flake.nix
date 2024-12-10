@@ -45,7 +45,7 @@
             pkgs.zoxide # Shell extension to navigate your filesystem faster
 
             ##########################
-            # Dotnet Stuff, for work
+            # Stuff for work
             ##########################
             pkgs.dotnetCorePackages.sdk_9_0
             pkgs.azure-cli
@@ -109,6 +109,14 @@
               # https://formulae.brew.sh/formula/vercel-cli#default
               # Command-line interface for Vercel
               "vercel-cli"
+
+              ##########################
+              # Stuff for work
+              ##########################
+
+              # https://formulae.brew.sh/formula/commitizen#default
+              # Defines a standard way of committing rules and communicating it
+              "commitizen"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
