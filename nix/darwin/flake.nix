@@ -168,6 +168,8 @@
               "/Applications/Google Chrome.app"
             ];
             finder.FXPreferredViewStyle = "clmv";
+            finder.AppleShowAllFiles = true;
+            finder.AppleShowAllExtensions = true;
             loginwindow.GuestEnabled = false;
             NSGlobalDomain.AppleICUForce24HourTime = true;
             NSGlobalDomain.AppleInterfaceStyle = "Dark";
