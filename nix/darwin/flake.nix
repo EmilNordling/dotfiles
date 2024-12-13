@@ -54,12 +54,39 @@
           homebrew = {
             enable = true;
             casks = [
+              "1password"
+
+              # https://formulae.brew.sh/cask/spotify#default
+              # Music streaming
+              "spotify"
+
+              # https://formulae.brew.sh/cask/zed#default
+              # Editor
               "zed"
+
+              # https://formulae.brew.sh/cask/wezterm#default
+              # Terminal emulator
               "wezterm"
+
+              # https://formulae.brew.sh/cask/fork#default
+              # Git client
               "fork"
+
+              # https://formulae.brew.sh/cask/slack#default
+              # Team communication and collaboration software
               "slack"
+
+              # https://formulae.brew.sh/cask/linear-linear#default
+              # Issue tracking and project management
               "linear-linear"
+
+              # https://formulae.brew.sh/cask/figma#default
+              # Interface design tool
               "figma"
+
+              # https://formulae.brew.sh/cask/screen-studio#default
+              # Screen recorder and editor
+              "screen-studio"
 
               # https://formulae.brew.sh/cask/google-chrome#default
               # Web browser
