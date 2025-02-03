@@ -43,6 +43,8 @@
             # pkgs.starship # The cross-shell prompt for astronauts
             pkgs.mkcert # Simple tool to make locally trusted development certificates
             pkgs.zoxide # Shell extension to navigate your filesystem faster
+            pkgs.obsidian # Research note-taking app
+            pkgs.bun # Node but not Node
 
             ##########################
             # Stuff for work
@@ -55,6 +57,8 @@
             enable = true;
             casks = [
               "1password"
+              "azure-data-studio"
+              "beekeeper-studio"
 
               # https://formulae.brew.sh/cask/spotify#default
               # Music streaming
