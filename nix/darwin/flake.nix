@@ -57,8 +57,18 @@
             enable = true;
             casks = [
               "1password"
+
+              # https://formulae.brew.sh/cask/visual-studio-code#default
+              # SQL client (another one)
               "azure-data-studio"
+
+              # https://formulae.brew.sh/cask/beekeeper-studio#default
+              # SQL client
               "beekeeper-studio"
+
+              # https://formulae.brew.sh/cask/docker#default
+              # Whale
+              "docker"
 
               # https://formulae.brew.sh/cask/spotify#default
               # Music streaming
