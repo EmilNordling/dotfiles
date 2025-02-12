@@ -25,7 +25,6 @@
       configuration =
         { pkgs, config, ... }:
         {
-
           nixpkgs.config.allowUnfree = true;
 
           # List packages installed in system profile. To search by name, run:
@@ -58,6 +57,9 @@
             casks = [
               "1password"
 
+              # Whale
+              "docker"
+
               # https://formulae.brew.sh/cask/visual-studio-code#default
               # SQL client (another one)
               "azure-data-studio"
@@ -65,10 +67,6 @@
               # https://formulae.brew.sh/cask/beekeeper-studio#default
               # SQL client
               "beekeeper-studio"
-
-              # https://formulae.brew.sh/cask/docker#default
-              # Whale
-              "docker"
 
               # https://formulae.brew.sh/cask/spotify#default
               # Music streaming
@@ -147,13 +145,13 @@
               # Command-line tool for Stripe
               # "stripe/stripe-cli/stripe"
 
-              # https://formulae.brew.sh/formula/vercel-cli#default
-              # Command-line interface for Vercel
-              "vercel-cli"
-
               ##########################
               # Stuff for work
               ##########################
+
+              # https://formulae.brew.sh/formula/vercel-cli#default
+              # Command-line interface for Vercel
+              "vercel-cli"
 
               # https://formulae.brew.sh/formula/commitizen#default
               # Defines a standard way of committing rules and communicating it

@@ -39,3 +39,10 @@ export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 . "/Users/emilnordling/.deno/env"
+
+# bun completions
+[ -s "/Users/emilnordling/.bun/_bun" ] && source "/Users/emilnordling/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
