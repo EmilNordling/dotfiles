@@ -7,6 +7,7 @@ readonly PATHS=(
     ".wezterm.lua $SELF_DIR/../ $HOME/"
     ".zshrc $SELF_DIR/../ $HOME/"
     ".config/zed/settings.json $SELF_DIR/../ $HOME/"
+    ".gitconfig $SELF_DIR/../ $HOME/"
 )
 
 is_symlink() {
