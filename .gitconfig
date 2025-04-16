@@ -16,8 +16,14 @@
     # `git di $number` shows the diff between the state `$number` revisions ago and the current state.
 	di = !"d() { git diff --patch-with-stat HEAD~$1; }; git diff-index --quiet HEAD -- || clear; d"
 
+    # Push remote changes
+    p = push
+
+	# Push the current branch to origin.
+	pup = push -u origin HEAD
+
 	# Pull in remote changes for the current repository and all its submodules.
-	p = pull --recurse-submodules
+	pl = pull --recurse-submodules
 
 	# Commit all changes.
 	ca = !git add ':(exclude,attr:builtin_objectmode=160000)' && git commit -av
@@ -30,9 +36,6 @@
 
     # Shorthand for unstage
     u = reset HEAD --
-
-	# Push the current branch to origin.
-	pup = push -u origin HEAD
 
 	# Switch to a branch, creating it if necessary.
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
