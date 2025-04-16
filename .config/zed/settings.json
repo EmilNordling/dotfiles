@@ -7,10 +7,14 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "vim_mode": true,
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "model": "gpt-4"
     },
     "version": "2"
   },
@@ -19,10 +23,9 @@
     "diagnostics": true,
     "metrics": true
   },
-  "vim_mode": true,
   "relative_line_numbers": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": null,
   "buffer_font_features": {
     "calt": false
   },
@@ -38,34 +41,73 @@
     "show_type_hints": false,
     "show_parameter_hints": true,
     "show_other_hints": true
+  },
+  "language_servers": [
+    "vtsls",
+    "!typescript-language-server",
+    "eslint",
+    "!biome",
+    "..."
+  ],
+  "language_server_options": {
+    "vtsls": {
+      "language_ids": [
+        "typescript",
+        "javascript",
+        "typescriptreact",
+        "javascriptreact"
+      ]
+    },
+    "typescript-language-server": {
+      "language_ids": [
+        "typescript",
+        "javascript",
+        "typescriptreact",
+        "javascriptreact"
+      ]
+    },
+    "eslint": {
+      "language_ids": [
+        "typescript",
+        "javascript",
+        "typescriptreact",
+        "javascriptreact"
+      ],
+      "initialization_options": {
+        "run_formatter": true
+      }
+    }
+  },
+  "languages": {
+    "TypeScript": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": {
+        "external": {
+          "command": "prettier",
+          "arguments": ["--stdin-filepath", "{buffer_path}"]
+        }
+      }
+    },
+    "TSX": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "formatter": "prettier",
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true
+      },
+      "format_on_save": "on"
+    }
+  },
+  "format_on_save": "on",
+  "project_panel": {
+    "file_icons": true
   }
-  // "lsp": {
-  //   "deno": {
-  //     "settings": {
-  //       "deno": {
-  //         "enable": true
-  //       }
-  //     }
-  //   }
-  // },
-  // "languages": {
-  //   "TypeScript": {
-  //     "language_servers": [
-  //       "deno",
-  //       "!typescript-language-server",
-  //       "!vtsls",
-  //       "!eslint"
-  //     ],
-  //     "formatter": "language_server"
-  //   },
-  //   "TSX": {
-  //     "language_servers": [
-  //       "deno",
-  //       "!typescript-language-server",
-  //       "!vtsls",
-  //       "!eslint"
-  //     ],
-  //     "formatter": "language_server"
-  //   }
-  // }
 }
