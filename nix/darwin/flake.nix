@@ -32,7 +32,7 @@
           environment.systemPackages = [
             pkgs.gh # Github cli
             pkgs.mkalias # Create aliases for executables
-            pkgs.neovim # Ambitious Vim-fork focused on extensibility and agility
+            pkgs.neovim # vim
             pkgs.tmux # Terminal multiplexer
             pkgs.nixfmt-rfc-style # The official formatter for Nix code
             pkgs.zsh # UNIX shell (command interpreter)
@@ -44,21 +44,16 @@
             pkgs.zoxide # Shell extension to navigate your filesystem faster
             pkgs.obsidian # Research note-taking app
             pkgs.bun # Node but not Node
-
-            ##########################
-            # Stuff for work
-            ##########################
-            pkgs.dotnetCorePackages.sdk_9_0
-            pkgs.azure-cli
+            pkgs.sqlc # Generate repo from SQL schema
+            # pkgs.ghostty # Terminal emulator / multiplexer (instead of Wezterm?!)
+            pkgs.wezterm
           ];
 
           homebrew = {
             enable = true;
             casks = [
-              "1password"
-
               # Whale
-              "docker"
+              # "docker"
 
               # https://formulae.brew.sh/cask/visual-studio-code#default
               # SQL client (another one)
@@ -78,7 +73,7 @@
 
               # https://formulae.brew.sh/cask/wezterm#default
               # Terminal emulator
-              "wezterm"
+              # "wezterm@nightly"
 
               # https://formulae.brew.sh/cask/fork#default
               # Git client
@@ -114,9 +109,16 @@
 
               # https://formulae.brew.sh/cask/zen-browser#default
               # Web browser
-              "zen-browser"
+              #"zen-browser"
+
+              # https://formulae.brew.sh/cask/orbstack#default
+              # Fast, lightweight, simple Docker Desktop alternative
+              "orbstack"
             ];
             brews = [
+              # Video encoding
+              "ffmpeg"
+
               # https://formulae.brew.sh/formula/go#default
               # Go lang
               "go"
@@ -145,8 +147,10 @@
               # Command-line tool for Stripe
               # "stripe/stripe-cli/stripe"
 
-              ##########################
-              # Stuff for work
+              # https://formulae.brew.sh/cask/1password#default
+              # Password manager
+              "1password"
+
               ##########################
 
               # https://formulae.brew.sh/formula/vercel-cli#default
@@ -156,6 +160,14 @@
               # https://formulae.brew.sh/formula/commitizen#default
               # Defines a standard way of committing rules and communicating it
               "commitizen"
+
+              # https://formulae.brew.sh/formula/awscli#default
+              # Universal Command Line Interface for Amazon Web Services
+              "awscli"
+
+              # https://formulae.brew.sh/formula/railway#default
+              # Railway CLI for deploying applications
+              "railway"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
