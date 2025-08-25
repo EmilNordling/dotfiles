@@ -114,10 +114,43 @@
               # https://formulae.brew.sh/cask/orbstack#default
               # Fast, lightweight, simple Docker Desktop alternative
               "orbstack"
+
+              # https://formulae.brew.sh/cask/1password#default
+              # Password manager
+              "1password"
+            ];
+            taps = [
+              # https://github.com/dagger/container-use
+              # Container resource usage monitoring tool
+              #"dagger/tap/container-use"
             ];
             brews = [
+              # https://formulae.brew.sh/formula/ffmpeg#default
               # Video encoding
               "ffmpeg"
+
+              # https://formulae.brew.sh/formula/stow#default
+              # Symlink farm manager
+              "stow"
+
+              # https://formulae.brew.sh/formula/jq#default
+              # Lightweight and flexible command-line JSON processor
+              "jq"
+
+              # https://formulae.brew.sh/formula/doppler#default
+              # CLI for interacting with Doppler secrets manager
+              "dopplerhq/cli/doppler"
+
+              # https://formulae.brew.sh/formula/fd#default
+              # Simple, fast and user-friendly alternative to find
+              "fd"
+
+              # https://formulae.brew.sh/formula/ripgrep#default
+              # Search tool like grep and The Silver Searcher
+              "ripgrep"
+
+              # Database migrations
+              "golang-migrate"
 
               # https://formulae.brew.sh/formula/go#default
               # Go lang
@@ -142,14 +175,6 @@
               # https://formulae.brew.sh/formula/starship#default
               # The cross-shell prompt for astronauts
               "starship"
-
-              # https://formulae.brew.sh/formula/stripe-cli#default
-              # Command-line tool for Stripe
-              # "stripe/stripe-cli/stripe"
-
-              # https://formulae.brew.sh/cask/1password#default
-              # Password manager
-              "1password"
 
               ##########################
 
@@ -207,7 +232,7 @@
             dock.persistent-apps = [
               "/Applications/Safari.app"
               "/Applications/Zed.app"
-              "/Applications/WezTerm.app"
+              "/Applications/Nix Apps/WezTerm.app"
               "/Applications/Fork.app"
               "/Applications/Figma.app"
               "/Applications/Linear.app"

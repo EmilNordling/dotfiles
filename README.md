@@ -1,13 +1,15 @@
->[!NOTE]
->I'm migrating to Nix. So the setup is a bit broken.
+> [!NOTE]
+> I'm migrating to Nix. So the setup is a bit broken.
 
 # Dotfiles
 
-Hello and welcome to Jurassic Park
+This repo contains my dotfile configuration.
 
 ## New machine huh?
 
 run `sh main.sh` for fun, very cool!
+
+Hello and welcome to Jurassic Park
 
 <br >
 <br >
