@@ -45,15 +45,22 @@
             pkgs.obsidian # Research note-taking app
             pkgs.bun # Node but not Node
             pkgs.sqlc # Generate repo from SQL schema
+            pkgs.just # Just a command runner (instead of MakeFile)
             # pkgs.ghostty # Terminal emulator / multiplexer (instead of Wezterm?!)
-            pkgs.wezterm
+            pkgs.wezterm # Terminal emulator / multiplexer
+            pkgs.python3 # Just Python
+            pkgs.claude-code # Slop generator
           ];
 
           homebrew = {
             enable = true;
             casks = [
+              # https://formulae.brew.sh/cask/zed#default
+              # Editor
+              "zed"
+
               # Whale
-              # "docker"
+              "docker"
 
               # https://formulae.brew.sh/cask/visual-studio-code#default
               # SQL client (another one)
@@ -66,14 +73,6 @@
               # https://formulae.brew.sh/cask/spotify#default
               # Music streaming
               "spotify"
-
-              # https://formulae.brew.sh/cask/zed#default
-              # Editor
-              "zed"
-
-              # https://formulae.brew.sh/cask/wezterm#default
-              # Terminal emulator
-              # "wezterm@nightly"
 
               # https://formulae.brew.sh/cask/fork#default
               # Git client
@@ -107,24 +106,31 @@
               # Web browser
               "firefox"
 
-              # https://formulae.brew.sh/cask/zen-browser#default
-              # Web browser
-              #"zen-browser"
+              # https://formulae.brew.sh/formula/stripe-cli#default
+              # Command-line tool for Stripe
+              "stripe/stripe-cli/stripe"
 
-              # https://formulae.brew.sh/cask/orbstack#default
-              # Fast, lightweight, simple Docker Desktop alternative
-              "orbstack"
+              # For icons in terminal
+              "font-fira-code-nerd-font"
 
-              # https://formulae.brew.sh/cask/1password#default
-              # Password manager
-              "1password"
+              # https://formulae.brew.sh/cask/ollama-app#default
+              # Local models downloader
+              "ollama-app"
+
+              # https://formulae.brew.sh/formula/opencode
+              # AI coding agent desktop client
+              "opencode-desktop"
+
+              # https://formulae.brew.sh/cask/claude-code
+              # Slop generator
+              "claude-code"
             ];
-            taps = [
-              # https://github.com/dagger/container-use
-              # Container resource usage monitoring tool
-              #"dagger/tap/container-use"
-            ];
+            taps = [];
             brews = [
+              # https://formulae.brew.sh/formula/coreutils#default
+              # GNU stuff
+              "coreutils"
+
               # https://formulae.brew.sh/formula/ffmpeg#default
               # Video encoding
               "ffmpeg"
@@ -156,9 +162,9 @@
               # Go lang
               "go"
 
-              # https://formulae.brew.sh/formula/rust#default
-              # Rust lang
-              "rust"
+              # https://formulae.brew.sh/formula/rustup
+              # Rust toolchain manager
+              "rustup"
 
               # https://formulae.brew.sh/formula/n#default
               # Node version management
@@ -175,6 +181,10 @@
               # https://formulae.brew.sh/formula/starship#default
               # The cross-shell prompt for astronauts
               "starship"
+
+              # https://formulae.brew.sh/formula/yt-dlp
+              # Feature-rich command-line audio/video downloader
+              "yt-dlp"
 
               ##########################
 
@@ -193,6 +203,26 @@
               # https://formulae.brew.sh/formula/railway#default
               # Railway CLI for deploying applications
               "railway"
+
+              # https://formulae.brew.sh/formula/hey#default
+              # HTTP load testing tool
+              "hey"
+
+              # https://formulae.brew.sh/formula/opencode
+              # AI coding agent, built for the terminal
+              "opencode"
+
+              # https://github.com/julienXX/terminal-notifier
+              # To send macOS User Notifications
+              "terminal-notifier"
+
+              # https://github.com/caarlos0/timer
+              # A sleep with progress.
+              "caarlos0/tap/timer"
+
+              # https://github.com/max-sixty/worktrunk
+              # Gitwork trees helper
+              "worktrunk"
             ];
             onActivation.cleanup = "zap";
             onActivation.autoUpdate = true;
@@ -232,7 +262,7 @@
             dock.persistent-apps = [
               "/Applications/Safari.app"
               "/Applications/Zed.app"
-              "/Applications/Nix Apps/WezTerm.app"
+              "/Applications/WezTerm.app"
               "/Applications/Fork.app"
               "/Applications/Figma.app"
               "/Applications/Linear.app"
