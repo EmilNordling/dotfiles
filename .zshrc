@@ -1,8 +1,11 @@
 # source ~/.zshrc
 # ～☆～
 
+# Ensure Nix binaries take precedence over system defaults
+export PATH="/run/current-system/sw/bin:$PATH"
+
 eval "$(zoxide init zsh)"
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

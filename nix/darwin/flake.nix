@@ -25,6 +25,8 @@
       configuration =
         { pkgs, config, ... }:
         {
+          system.primaryUser = "emilnordling";
+
           nixpkgs.config.allowUnfree = true;
 
           # List packages installed in system profile. To search by name, run:
@@ -108,7 +110,7 @@
 
               # https://formulae.brew.sh/formula/stripe-cli#default
               # Command-line tool for Stripe
-              "stripe/stripe-cli/stripe"
+              # "stripe/stripe-cli/stripe"
 
               # For icons in terminal
               "font-fira-code-nerd-font"
@@ -234,7 +236,7 @@
               env = pkgs.buildEnv {
                 name = "system-applications";
                 paths = config.environment.systemPackages;
-                pathsToLink = "/Applications";
+                pathsToLink = [ "/Applications" ];
               };
             in
             pkgs.lib.mkForce ''
